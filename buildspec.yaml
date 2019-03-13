@@ -4,6 +4,7 @@ phases:
   pre_build:
     commands:
       # login to ECR
+      - aws --version
       - $(aws ecr get-login --region us-east-2 --no-include-email)
       # get commit hash
       - REPOSITORY_URI=695500506655.dkr.ecr.us-east-2.amazonaws.com/base_image
